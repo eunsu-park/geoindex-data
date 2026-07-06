@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Unified CLI for setup-sw-db.
+# Unified CLI for geoindex-data.
 # Dispatches to core/main.py with all arguments.
 
 set -euo pipefail

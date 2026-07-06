@@ -1,4 +1,4 @@
-"""Unified CLI entry point for setup-sw-db.
+"""Unified CLI entry point for geoindex-data.
 
 Dispatches subcommands to existing scripts via subprocess. Provides a
 single `swdb` interface for all database and download operations.
@@ -331,7 +331,9 @@ def build_parser() -> argparse.ArgumentParser:
     """
     parser = argparse.ArgumentParser(
         prog="swdb",
-        description="Unified CLI for setup-sw-db: solar wind database management",
+        description="Unified CLI for geoindex-data: index-agnostic space "
+                    "weather and solar data management (OMNI solar wind, "
+                    "Hp30/Hp60 geomagnetic indices, GOES, solar images)",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 

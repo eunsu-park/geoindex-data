@@ -17,7 +17,7 @@ from egghouse.database import PostgresManager
 from core import load_config
 
 
-# Columns to export (matches regression-sw input_variables + target)
+# Columns to export (matches geoindex-model input_variables + target)
 SW_30MIN_COLUMNS = [
     'datetime',
     'v_avg', 'v_min', 'v_max',
