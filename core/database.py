@@ -76,9 +76,9 @@ def create_tables(db_config: dict, schema_config: dict, drop: bool = False):
             if name in existing:
                 if drop:
                     db.execute(f"DROP TABLE IF EXISTS {name} CASCADE")
-                    print(f"  {name}: 삭제 후 재생성")
+                    print(f"  {name}: dropped and recreated")
                 else:
-                    print(f"  {name}: 이미 존재 (skip)")
+                    print(f"  {name}: already exists (skip)")
                     continue
 
             # Extract metadata from schema
@@ -105,7 +105,7 @@ def create_tables(db_config: dict, schema_config: dict, drop: bool = False):
                 schema['_indexes'] = indexes
 
             col_count = len([k for k in schema.keys() if not k.startswith('_')])
-            print(f"  {name}: 생성 ({col_count} 컬럼)")
+            print(f"  {name}: created ({col_count} columns)")
 
 
 def _create_table_with_composite_pk(db, table_name: str, schema: dict,

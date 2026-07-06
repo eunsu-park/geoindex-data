@@ -1,4 +1,4 @@
-"""Config 로드 유틸리티"""
+"""Config loading utilities."""
 import yaml
 import os
 import re
@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 def load_config(path: str | Path) -> dict:
-    """YAML 설정 파일 로드 (환경변수 치환 포함)
+    """Load a YAML config file with environment variable substitution.
 
     Supports ${VAR} and ${VAR:default} syntax.
     """
