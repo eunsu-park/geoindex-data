@@ -227,4 +227,4 @@ geoindex-data/
 
 ## License
 
-MIT License (2026) - Eunsu Park
+MIT License. See [LICENSE](LICENSE).
