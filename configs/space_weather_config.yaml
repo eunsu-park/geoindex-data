@@ -3,7 +3,7 @@
 
 db_config:
   host: ${DB_HOST:localhost}
-  port: 5432
+  port: ${DB_PORT:5432}
   database: space_weather
   user: ${DB_USER}
   password: ${DB_PASSWORD}
